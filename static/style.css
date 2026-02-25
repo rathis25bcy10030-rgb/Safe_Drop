@@ -1,0 +1,133 @@
+/* ===== Global Dark Theme ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 95%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* ===== Title Styling ===== */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #00f5ff;
+    text-shadow: 0 0 10px #00f5ff;
+}
+
+.subtitle {
+    color: #aaaaaa;
+    margin-bottom: 25px;
+}
+
+/* ===== Card Styling ===== */
+.card {
+    background: rgba(20, 20, 30, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* ===== Form Elements ===== */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #00f5ff;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #00f5ff;
+    border-radius: 8px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background: #00f5ff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #00c3cc;
+}
+
+/* ===== Button ===== */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #00f5ff, #0066ff);
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f5ff;
+}
+
+/* ===== Info Box ===== */
+.info-box {
+    background: rgba(10, 10, 20, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    text-align: left;
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+    color: #00f5ff;
+}
+
+.info-box ul {
+    list-style: none;
+}
+
+.info-box li {
+    margin-bottom: 8px;
+    color: #cccccc;
+}
+
+/* ===== Flash Message Styling ===== */
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
