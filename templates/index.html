@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SafeDrop - Secure File Upload Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🛡 SafeDrop</h1>
+        <p class="subtitle">Smart & Secure File Upload Protection System</p>
+
+        <div class="card">
+            
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 8px; margin-bottom: 15px; color: #ffcc00;">
+                        {% for message in messages %}
+                            <p style="margin: 0;">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form method="POST" enctype="multipart/form-data">
+                <label for="file">Select a File</label>
+                <input type="file" id="file" name="file" required>
+
+                <button type="submit">Upload Securely</button>
+
+                <p id="message"></p>
+            </form>
+        </div>
+
+        <div class="info-box">
+            <h3>Security Protection Enabled:</h3>
+            <ul>
+                <li>✔ File Type Whitelisting (PDF, JPG, PNG, JPEG)</li>
+                <li>✔ Maximum File Size: 5MB</li>
+                <li>✔ Double Extension Detection</li>
+                <li>✔ Backend Secure Validation</li>
+                <li>✔ Suspicious Upload Logging</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
